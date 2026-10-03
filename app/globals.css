@@ -1,0 +1,101 @@
+@import "tailwindcss";
+
+/*
+ * Tokens for both colour schemes. One accent, one radius rule:
+ * surfaces (images, panels) use rounded-lg, controls use rounded-md.
+ */
+:root {
+  --paper: #eef1f4;
+  --ink: #0f1a24;
+  --line: #d3dae1;
+  --muted: #566676;
+  --accent: #8a5a00;
+
+  /* The one deliberate colour block on the page: the Work section. */
+  --band: #15232f;
+  --band-text: #d9e3ea;
+  --band-muted: #8fa3b3;
+  --band-line: #2a3d4d;
+
+  /* The live panel borrows the trading dashboard's own palette. */
+  --term: #15232f;
+  --term-line: #243545;
+  --term-text: #d9e3ea;
+  --term-muted: #8fa3b3;
+  --up: #4fb89a;
+  --down: #e26d5c;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --paper: #0c141b;
+    --ink: #e6edf2;
+    --line: #233341;
+    --muted: #93a5b4;
+    --accent: #e3b04b;
+
+    --band: #121e28;
+    --band-line: #243545;
+  }
+}
+
+@theme inline {
+  --color-paper: var(--paper);
+  --color-ink: var(--ink);
+  --color-line: var(--line);
+  --color-muted: var(--muted);
+  --color-accent: var(--accent);
+  --color-band: var(--band);
+  --color-band-text: var(--band-text);
+  --color-band-muted: var(--band-muted);
+  --color-band-line: var(--band-line);
+  --color-term: var(--term);
+  --color-term-line: var(--term-line);
+  --color-term-text: var(--term-text);
+  --color-term-muted: var(--term-muted);
+  --color-up: var(--up);
+  --color-down: var(--down);
+  --font-sans: var(--font-body);
+  --font-display: var(--font-display);
+  --font-mono: var(--font-figures);
+}
+
+html {
+  color-scheme: light dark;
+  scroll-behavior: smooth;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+}
+
+body {
+  background: var(--paper);
+  color: var(--ink);
+  font-family: var(--font-body), system-ui, sans-serif;
+  font-size: 1.0625rem;
+  line-height: 1.65;
+}
+
+/* Bricolage Grotesque is a variable font: narrower and tighter at display sizes. */
+.display-tight {
+  font-variation-settings: "wdth" 90, "opsz" 96;
+  letter-spacing: -0.01em;
+}
+
+.num {
+  font-family: var(--font-figures), ui-monospace, monospace;
+  font-variant-numeric: tabular-nums;
+}
+
+:focus-visible {
+  outline: 2px solid var(--accent);
+  outline-offset: 3px;
+  border-radius: 2px;
+}
+
+::selection {
+  background: color-mix(in oklab, var(--accent) 30%, transparent);
+}
