@@ -14,7 +14,7 @@ export const site = {
   email: "arifnoviarrizal@gmail.com",
   github: "https://github.com/noviarrizal",
   linkedin: "https://www.linkedin.com/in/arif-noviarrizal/",
-  upwork: "https://www.upwork.com/freelancers/~01c9c20de3e6b27fd5?mp_source=share",
+  upwork: "https://www.upwork.com/freelancers/~01c9c20de3e6b27fd5",
 } as const;
 
 export const socialLinks = [
