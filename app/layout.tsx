@@ -39,6 +39,9 @@ export const metadata: Metadata = {
   },
   twitter: { card: "summary_large_image", title, description: site.description },
   robots: { index: true, follow: true },
+  // Search Console ownership tag. Set NEXT_PUBLIC_GOOGLE_SITE_VERIFICATION to the token it gives you;
+  // when the variable is absent no tag is rendered.
+  verification: { google: process.env.NEXT_PUBLIC_GOOGLE_SITE_VERIFICATION },
 };
 
 const structuredData = {
