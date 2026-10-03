@@ -13,8 +13,8 @@ export const site = {
     "Frontend engineer in Jakarta building real-time trading dashboards, fintech UIs and React Native apps with React, Next.js and TypeScript.",
   email: "arifnoviarrizal@gmail.com",
   github: "https://github.com/noviarrizal",
-  linkedin: "",
-  upwork: "",
+  linkedin: "https://www.linkedin.com/in/arif-noviarrizal/",
+  upwork: "https://www.upwork.com/freelancers/~01c9c20de3e6b27fd5?mp_source=share",
 } as const;
 
 export const socialLinks = [
